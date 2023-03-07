@@ -1,0 +1,160 @@
+:root {
+
+/*Primary*/
+
+--Brightorange: hsl(31, 77%, 52%);
+--Darkcyan: hsl(184, 100%, 22%);
+--VeryDarkCyan: hsl(179, 100%, 13%);
+
+/*Neutral*/
+
+--TransparentWhite/*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
+--VeryLightGray /*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+
+/*font*/
+
+--font1: 'Lexend Deca';
+--font2: 'Big Shoulders Display';
+}
+
+/*Globales*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    font-size: 15px;
+    font-family: var(--font1);
+    font-weight: 400;
+    background-color: var(--VeryLightGray);
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: var(--font2);
+    font-weight: 700;
+    color: var(--VeryLightGray);
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+/*generales de las secciones*/
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1280px) {
+    section {
+        flex-direction: row;
+        margin-top: 10rem;
+    }
+}
+
+.icono {
+    padding: 5rem 0 3.5rem 0;
+}
+
+.articulo {
+    max-width: 33rem;
+    padding: 0 5.3rem 6rem 4rem;
+}
+@media (min-width: 1280px) {
+    .articulo {
+        width: 30rem;
+    }
+}
+
+/*especificos de cada seccion*/
+
+.articulo1 {
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--Brightorange);
+}
+@media (min-width: 1280px) {
+    .articulo1 {
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+.articulo2 {
+    background-color: var(--Darkcyan);
+}
+
+.articulo3 {
+    border-radius: 0 0 1rem 1rem;
+    background-color: var(--VeryDarkCyan);
+}
+@media (min-width: 1280px) {
+    .articulo3 {
+        padding-right: 4rem;
+        border-radius: 0 1rem 1rem 0;
+}
+}
+
+p {
+    color: var(--TransparentWhite);
+    padding: 0 0 4rem 0;
+    margin: 0;
+    line-height: 1.7;
+}
+@media (min-width: 1280px) {
+    p {
+        padding: 0 0 9rem 0;
+    }
+}
+
+/*botones*/
+
+.boton {
+    background-color: var(--VeryLightGray);
+    text-decoration: none;
+    padding: 1.5rem 3.5rem;
+    border-radius: 3rem;
+}
+.boton1 {
+    color: var(--Brightorange);
+}
+.boton1:hover {
+    background-color: var(--Brightorange);
+    color: var(--VeryLightGray);
+    border: 1px solid;
+    transition: background-color .3s ease;
+}
+.boton2 {
+    color: var(--Darkcyan);
+}
+.boton2:hover {
+    background-color: var(--Darkcyan);
+    color: var(--VeryLightGray);
+    border: 1px solid;
+    transition: background-color .3s ease;
+}
+.boton3 {
+    color: var(--VeryDarkCyan);
+}
+.boton3:hover {
+    background-color: var(--VeryDarkCyan);
+    color: var(--VeryLightGray);
+    border: 1px solid;
+    transition: background-color .3s ease;
+}
+
+/*atribuciones*/
+
+.attribution { 
+    padding-top: 2rem;
+    font-size: 11px;
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
